@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITC505 • Lab 6</title>
+
+  <!-- Nice font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- HEADER -->
+    <header class="header glass">
+      <div class="headerRow">
+        <div>
+          <p class="pill">ITC505 • Lab 6</p>
+          <h1>Cozy Mini Tools</h1>
+          <p class="sub">Holy Grail Layout (CSS Grid) + Interactive JavaScript</p>
+        </div>
+        <div class="heroIcon">✦</div>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <nav class="nav card">
+      <h2>Menu</h2>
+      <a href="#" class="navLink">Home</a>
+      <a href="#" class="navLink">Labs</a>
+      <a href="#" class="navLink">Projects</a>
+      <a href="#" class="navLink">Contact</a>
+
+      <div class="note">
+        <strong>Tip:</strong> Links can be fake — they just need to look like navigation.
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main card">
+      <h2>✨ Aesthetic Number Sorter</h2>
+      <p class="small">Enter numbers separated by commas. See sorted output + sorting “passes”.</p>
+
+      <div class="tool">
+        <label for="numbers">Numbers</label>
+        <input id="numbers" placeholder="Example: 9, 3, 7, 1, 5" />
+
+        <div class="btnRow">
+          <button id="btnRandom" class="btn">Random</button>
+          <button id="btnSort" class="btn primary">Sort</button>
+          <button id="btnClear" class="btn ghost">Clear</button>
+        </div>
+
+        <div class="grid2">
+          <div class="panel">
+            <p class="panelTitle">Parsed</p>
+            <pre id="parsed">(waiting…)</pre>
+          </div>
+
+          <div class="panel">
+            <p class="panelTitle">Sorted</p>
+            <pre id="result">(waiting…)</pre>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="panelTitle">Steps (Bubble Sort passes)</p>
+          <pre id="steps">(waiting…)</pre>
+        </div>
+      </div>
+    </main>
+
+    <!-- ADVERTISEMENT -->
+    <aside class="ad card">
+      <h2>Advertisement</h2>
+      <p class="small">Click the image to open Amazon.</p>
+
+      <a class="adLink"
+         href="https://www.amazon.com/Teknoluzor-Productivity-Countdown-Vibration-Adjustable/dp/B0CSY7G5W7"
+         target="_blank" rel="noopener noreferrer">
+
+        <!-- LOCAL IMAGE FILE (must be in same folder as index.html) -->
+        <img class="adImg" src="pomodoro.jpg" alt="Pomodoro Timer">
+
+        <div class="adCaption">Study Pomodoro Timer – Click to view on Amazon</div>
+      </a>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="footer card">
+      <h2>Addendum</h2>
+      <div class="addendum">
+        <p><strong>Problem solved:</strong> I built a number sorter that sorts a list of integers.</p>
+        <p><strong>How:</strong> JavaScript reads the input, converts it into an array, runs Bubble Sort, and displays results + each pass.</p>
+        <p><strong>Difficulties:</strong> Handling empty/invalid input. I fixed it by validating values and showing an alert.</p>
+      </div>
+
+      <!-- REQUIRED FOOTER SCRIPT (keep exactly like this) -->
+      <footer>
+        <p>Last updated:
+          <span id="lastModified"></span>
+        </p>
+      </footer>
+      <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+      </script>
+    </footer>
+
+  </div>
+
+  <!-- IMPORTANT: JS must be loaded at bottom -->
+  <script src="app.js"></script>
+</body>
+</html>
